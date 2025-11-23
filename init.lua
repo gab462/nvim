@@ -7,7 +7,7 @@ vim.o.smartindent = true
 vim.o.hlsearch = false
 vim.o.mouse = ""
 vim.o.guicursor = ""
-vim.o.guifont = "RobotoMono Nerd Font:h18"
+vim.o.guifont = "Iosevka SS04 Medium Extended:h24"
 
 vim.g.netrw_banner = 0
 
@@ -57,6 +57,14 @@ lazy.setup({
           'NeogitOrg/neogit',
           dependencies = { 'nvim-lua/plenary.nvim' },
           cmd = 'Neogit'
+      },
+      {
+          'nvim-orgmode/orgmode',
+          ft = 'org',
+          opts = {
+              org_agenda_files = "~/org/**/*",
+              org_default_notes_file = "~/org/refile.org"
+          }
       }
   },
   checker = { enabled = true }
